@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentee Onboarding Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+<div class="bg-white p-6 rounded-lg shadow-lg max-w-md w-full max-h-[90vh] overflow-auto">
+    <h2 class="text-2xl font-semibold text-center mb-6">Mentee Onboarding</h2>
+    <form id="menteeOnboardingForm" class="space-y-4">
+        <!-- Full Name -->
+        <div class="form-group">
+            <label for="fullName" class="block text-gray-700 font-medium mb-2">Full Name</label>
+            <input type="text" id="fullName" name="fullName" class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+        </div>
+
+        <!-- Profile Picture -->
+        <div class="form-group">
+            <label for="profilePicture" class="block text-gray-700 font-medium mb-2">Upload Profile Picture</label>
+            <input type="file" id="profilePicture" name="profilePicture" accept="image/*" class="w-full p-2 border border-gray-300 rounded-lg" required>
+        </div>
+
+        <!-- Contact Email -->
+        <div class="form-group">
+            <label for="contactEmail" class="block text-gray-700 font-medium mb-2">Contact Email</label>
+            <input type="email" id="contactEmail" name="contactEmail" class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+        </div>
+
+        <!-- Contact Phone Number -->
+        <div class="form-group">
+            <label for="phoneNumber" class="block text-gray-700 font-medium mb-2">Contact Phone Number</label>
+            <input type="tel" id="phoneNumber" name="phoneNumber" class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+        </div>
+
+        <!-- Select Year -->
+        <div class="form-group">
+            <label for="year" class="block text-gray-700 font-medium mb-2">Select Year</label>
+            <select id="year" name="year" class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                <option value="" disabled selected>Select Year</option>
+                <option value="1st">1st Year</option>
+                <option value="2nd">2nd Year</option>
+                <option value="3rd">3rd Year</option>
+                <option value="4th">4th Year</option>
+            </select>
+        </div>
+
+        <!-- Select Branch -->
+        <div class="form-group">
+            <label for="branch" class="block text-gray-700 font-medium mb-2">Select Branch</label>
+            <select id="branch" name="branch" class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                <option value="" disabled selected>Select Branch</option>
+                <option value="Computer">Computer</option>
+                <option value="Civil">Civil</option>
+                <option value="Mechanical">Mechanical</option>
+                <option value="IT">Information Technology (IT)</option>
+                <option value="AIML">Artificial Intelligence & Machine Learning (AIML)</option>
+                <option value="DS">Data Science (DS)</option>
+            </select>
+        </div>
+
+        <!-- Bio -->
+        <div class="form-group">
+            <label for="bio" class="block text-gray-700 font-medium mb-2">Tell us about yourself</label>
+            <textarea id="bio" name="bio" class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Tell about yourself and your past achievements" required></textarea>
+        </div>
+
+        <!-- Career Aspirations -->
+        <div class="form-group">
+            <label for="aspirations" class="block text-gray-700 font-medium mb-2">Career Aspirations</label>
+            <input type="text" id="aspirations" name="aspirations" class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Tell us about your career aspirations" required>
+        </div>
+
+        <!-- Multi-Choice Subjects -->
+        <div class="form-group">
+            <label class="block text-gray-700 font-medium mb-2">Subjects:</label>
+            <div class="space-y-2">
+                <label class="inline-flex items-center">
+                    <input type="checkbox" name="subjects" value="Data Structures" class="form-checkbox text-blue-500">
+                    <span class="ml-2">Data Structures</span>
+                </label>
+                <label class="inline-flex items-center">
+                    <input type="checkbox" name="subjects" value="DBMS" class="form-checkbox text-blue-500">
+                    <span class="ml-2">DBMS</span>
+                </label>
+                <label class="inline-flex items-center">
+                    <input type="checkbox" name="subjects" value="MPCA" class="form-checkbox text-blue-500">
+                    <span class="ml-2">MPCA</span>
+                </label>
+                <label class="inline-flex items-center">
+                    <input type="checkbox" name="subjects" value="Cybersecurity" class="form-checkbox text-blue-500">
+                    <span class="ml-2">Cybersecurity</span>
+                </label>
+                <label class="inline-flex items-center">
+                    <input type="checkbox" name="subjects" value="Blockchain" class="form-checkbox text-blue-500">
+                    <span class="ml-2">Blockchain</span>
+                </label>
+            </div>
+        </div>
+
+        <!-- Multi-Choice Skills -->
+        <div class="form-group">
+            <label class="block text-gray-700 font-medium mb-2">Skills:</label>
+            <div class="space-y-2">
+                <label class="inline-flex items-center">
+                    <input type="checkbox" name="skills" value="CSS" class="form-checkbox text-blue-500">
+                    <span class="ml-2">CSS</span>
+                </label>
+                <label class="inline-flex items-center">
+                    <input type="checkbox" name="skills" value="JS" class="form-checkbox text-blue-500">
+                    <span class="ml-2">JS</span>
+                </label>
+                <label class="inline-flex items-center">
+                    <input type="checkbox" name="skills" value="HTML" class="form-checkbox text-blue-500">
+                    <span class="ml-2">HTML</span>
+                </label>
+                <label class="inline-flex items-center">
+                    <input type="checkbox" name="skills" value="MERN Stack" class="form-checkbox text-blue-500">
+                    <span class="ml-2">MERN Stack</span>
+                </label>
+                <label class="inline-flex items-center">
+                    <input type="checkbox" name="skills" value="Web Dev" class="form-checkbox text-blue-500">
+                    <span class="ml-2">Web Dev</span>
+                </label>
+                <label class="inline-flex items-center">
+                    <input type="checkbox" name="skills" value="App Dev" class="form-checkbox text-blue-500">
+                    <span class="ml-2">App Dev</span>
+                </label>
+                <label class="inline-flex items-center">
+                    <input type="checkbox" name="skills" value="Backend Dev" class="form-checkbox text-blue-500">
+                    <span class="ml-2">Backend Dev</span>
+                </label>
+                <label class="inline-flex items-center">
+                    <input type="checkbox" name="skills" value="Full Stack" class="form-checkbox text-blue-500">
+                    <span class="ml-2">Full Stack</span>
+                </label>
+                <label class="inline-flex items-center">
+                    <input type="checkbox" name="skills" value="Robotics" class="form-checkbox text-blue-500">
+                    <span class="ml-2">Robotics</span>
+                </label>
+            </div>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="w-full py-2 px-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">Submit</button>
+    </form>
+</div>
+
+<script type="module" src="assets/js/submitmentee.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Announcements - Stutor</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex flex-col min-h-screen">
+  <nav class="fixed top-0 left-0 right-0 z-50 flex items-center p-4 bg-white shadow-md">
+    <div class="flex items-center space-x-4">
+      <a href="#">
+        <img src="https://firebasestorage.googleapis.com/v0/b/stutor-codekridos.appspot.com/o/profile_pics%2FDKZ3tUhk9wgeYKJPjNus8gyQflT2%2FScreenshot%202024-09-14%20at%208.21.36%E2%80%AFAM.png?alt=media&token=6d6ef0e5-735b-4e00-a057-ca1d53d6b4de" alt="Logo" class="h-10 w-auto">
+      </a>
+      <a href="#" class="text-gray-600 hover:text-black font-medium ml-12">Stutor</a>
+    </div>
+    <div class="flex-1 flex justify-center">
+        <div class="relative w-full max-w-md">
+        <input type="text" placeholder="Search..." class="bg-gray-100 text-gray-600 px-4 py-2 rounded-full w-full border border-gray-300 focus:border-blue-500 focus:outline-none">
+        <div class="absolute right-3 top-2 text-gray-400">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M12.9 14.32a8 8 0 111.42-1.42l5.38 5.38a1 1 0 01-1.42 1.42l-5.38-5.38zM8 14A6 6 0 108 2a6 6 0 000 12z" clip-rule="evenodd" />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div class="flex items-center">
+      <div class="relative">
+          <div class="h-10 w-10 flex items-center justify-center text-gray-600">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" class="h-8 w-8">
+            <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/>
+          </svg>
+        </div>
+      </div>
+      <div class="relative group ml-[25px]">
+        <div class="h-10 w-10 rounded-full bg-black cursor-pointer"></div>
+
+        <div class="absolute right-0 mt-2 w-64 bg-white rounded-lg shadow-lg py-2 hidden group-hover:block">
+          <div class="flex flex-col items-center">
+            <img src="https://via.placeholder.com/60" alt="Profile" class="w-16 h-16 rounded-full">
+            <span class="mt-2 text-gray-800 font-semibold">Muralidhar Acharya</span>
+          </div>
+          <hr class="border-gray-200 my-2">
+          <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-black">Profile</a>
+          <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-black">Settings</a>
+          <hr class="border-gray-200 my-2">
+          <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-black">Sign out</a>
+     </div>
+      </div>
+    </div>
+
+  </nav>
+  <div class="flex flex-1 pt-20 bg-gray-50">
+    <aside class="w-64 bg-white shadow-lg">
+      <div class="px-6 py-4">
+        <h2 class="text-xl font-semibold text-gray-800">Explore</h2>
+        <ul class="mt-4 space-y-4">
+          <li><a href="mentee.html" class="block text-gray-600 hover:text-black">Home</a></li>
+          <li><a href="#" class="block text-gray-600 hover:text-black">Mentees Dashboard</a></li>
+          <li><a href="#" class="block text-gray-600 hover:text-black">Library</a></li>
+          <li><a href="requestsmentor.html" class="block text-gray-600 hover:text-black">Request</a></li>
+          <li><a href="announcements.html" class="block text-gray-600 hover:text-black">Announcements</a></li>
+        </ul>
+      </div>
+    </aside>
+    <main class="flex-1 p-8">
+      <div class="text-center">
+        <h1 class="text-3xl font-bold text-gray-800 mb-4">Latest Announcements</h1>
+        <div class="bg-white shadow-md rounded-lg p-6 mb-6">
+          <h2 class="text-xl font-semibold text-gray-800">Upcoming Hackathon Event</h2>
+          <p class="mt-2 text-gray-600">We are excited to announce our upcoming Hackathon event scheduled for October 15, 2024. Join us for a day of innovation and collaboration. Register now to be part of this exciting challenge!</p>
+          <a href="#" class="text-blue-500 hover:underline mt-4 block">Learn More</a>
+        </div>
+
+        <div class="bg-white shadow-md rounded-lg p-6 mb-6">
+          <h2 class="text-xl font-semibold text-gray-800">New Mentorship Program</h2>
+          <p class="mt-2 text-gray-600">We are launching a new mentorship program designed to connect experienced mentors with emerging talents. If you are interested in becoming a mentor or finding a mentor, sign up now to get involved!</p>
+          <a href="#" class="text-blue-500 hover:underline mt-4 block">Sign Up</a>
+        </div>
+
+        <div class="bg-white shadow-md rounded-lg p-6">
+          <h2 class="text-xl font-semibold text-gray-800">Workshop on Advanced Web Development</h2>
+          <p class="mt-2 text-gray-600">Don’t miss our workshop on advanced web development techniques. The workshop will cover the latest trends in web technologies and provide hands-on experience with cutting-edge tools.</p>
+          <a href="#" class="text-blue-500 hover:underline mt-4 block">Register Here</a>
+        </div>
+      </div>
+       </main>
+  </div>
+  <footer class="bg-gray-900 text-gray-200 py-8 mt-auto">
+    <div class="container mx-auto text-center">
+      <div class="flex justify-center space-x-8 mb-6">
+        <a href="https://www.instagram.com" target="_blank">
+          <img src="https://img.icons8.com/fluent/48/ffffff/instagram-new.png"    alt="Instagram" class="h-8 w-8">
+        </a>
+        <a href="https://twitter.com" target="_blank">
+          <img src="https://img.icons8.com/fluent/48/ffffff/twitter.png" alt="Twitter" class="h-8 w-8">
+        </a>
+        <a href="https://telegram.org" target="_blank">
+          <img src="https://img.icons8.com/fluent/48/ffffff/telegram-app.png"    alt="Telegram" class="h-8 w-8">
+        </a>
+        <a href="https://www.youtube.com" target="_blank">
+            <img src="https://img.icons8.com/fluent/48/ffffff/youtube-play.png" alt="YouTube" class="h-8 w-8">
+    </a>
+      </div>
+      <p class="text-sm">© 2024 Stutor. All rights reserved.</p>
+      <p class="text-sm mt-2"><a href="#" class="text-blue-400 hover:underline">Privacy Policy</a> | <a href="#" class="text-blue-400 hover:underline">Terms of Service</a></p>
+    </div>
+      </footer>
+
+</body>
+</html>

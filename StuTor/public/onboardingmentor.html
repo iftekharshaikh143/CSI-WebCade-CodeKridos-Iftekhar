@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentor Onboarding Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gradient-to-r from-blue-500 to-indigo-600 flex items-center justify-center min-h-screen">
+
+    <div class="bg-white p-8 rounded-3xl shadow-2xl max-w-md w-full max-h-[90vh] overflow-auto transform transition duration-500 hover:scale-105">
+        <h2 class="text-3xl font-bold text-center text-blue-600 mb-8">Mentor Onboarding</h2>
+        <form id="mentorOnboardingForm" class="space-y-6">
+            
+            <div class="form-group">
+                <label for="fullName" class="block text-gray-700 font-semibold mb-2">Full Name</label>
+                <input type="text" id="fullName" name="fullName" class="w-full p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-transparent" placeholder="Enter your full name" required>
+            </div>
+
+            
+            <div class="form-group">
+                <label for="profilePicture" class="block text-gray-700 font-semibold mb-2">Upload Profile Picture</label>
+                <input type="file" id="profilePicture" name="profilePicture" accept="image/*" class="w-full p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-transparent" required>
+            </div>
+
+            
+            <div class="form-group">
+                <label for="contactEmail" class="block text-gray-700 font-semibold mb-2">Contact Email</label>
+                <input type="email" id="contactEmail" name="contactEmail" class="w-full p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-transparent" placeholder="Enter your email address" required>
+            </div>
+
+            
+            <div class="form-group">
+                <label for="phoneNumber" class="block text-gray-700 font-semibold mb-2">Contact Phone Number</label>
+                <input type="tel" id="phoneNumber" name="phoneNumber" class="w-full p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-transparent" placeholder="Enter your phone number" required>
+            </div>
+
+            
+            <div class="form-group">
+                <label for="year" class="block text-gray-700 font-semibold mb-2">Select Year</label>
+                <select id="year" name="year" class="w-full p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-transparent" required>
+                    <option value="" disabled selected>Select Year</option>
+                    <option value="1st">1st Year</option>
+                    <option value="2nd">2nd Year</option>
+                    <option value="3rd">3rd Year</option>
+                    <option value="4th">4th Year</option>
+                </select>
+            </div>
+
+            
+            <div class="form-group">
+                <label for="branch" class="block text-gray-700 font-semibold mb-2">Select Branch</label>
+                <select id="branch" name="branch" class="w-full p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-transparent" required>
+                    <option value="" disabled selected>Select Branch</option>
+                    <option value="Computer">Computer</option>
+                    <option value="Civil">Civil</option>
+                    <option value="Mechanical">Mechanical</option>
+                    <option value="IT">Information Technology (IT)</option>
+                    <option value="AIML">Artificial Intelligence & Machine Learning (AIML)</option>
+                    <option value="DS">Data Science (DS)</option>
+                </select>
+            </div>
+
+            
+            <div class="form-group">
+                <label for="bio" class="block text-gray-700 font-semibold mb-2">About Yourself</label>
+                <textarea id="bio" name="bio" class="w-full p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-transparent" placeholder="Tell us about your background and experience" required></textarea>
+            </div>
+
+            
+            <div class="form-group">
+                <label for="aspirations" class="block text-gray-700 font-semibold mb-2">Career Aspirations</label>
+                <input type="text" id="aspirations" name="aspirations" class="w-full p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-transparent" placeholder="What are your career goals?" required>
+            </div>
+
+            
+            <div class="form-group">
+                <label class="block text-gray-700 font-semibold mb-2">Subjects of Expertise</label>
+                <div class="space-y-2">
+                    <label class="inline-flex items-center">
+                        <input type="checkbox" name="subjects" value="Data Structures" class="form-checkbox text-blue-500">
+                        <span class="ml-2">Data Structures</span>
+                    </label>
+                    <label class="inline-flex items-center">
+                        <input type="checkbox" name="subjects" value="DBMS" class="form-checkbox text-blue-500">
+                        <span class="ml-2">DBMS</span>
+                    </label>
+                    <label class="inline-flex items-center">
+                        <input type="checkbox" name="subjects" value="MPCA" class="form-checkbox text-blue-500">
+                        <span class="ml-2">MPCA</span>
+                    </label>
+                    <label class="inline-flex items-center">
+                        <input type="checkbox" name="subjects" value="Cybersecurity" class="form-checkbox text-blue-500">
+                        <span class="ml-2">Cybersecurity</span>
+                    </label>
+                    <label class="inline-flex items-center">
+                        <input type="checkbox" name="subjects" value="Blockchain" class="form-checkbox text-blue-500">
+                        <span class="ml-2">Blockchain</span>
+                    </label>
+                </div>
+            </div>
+
+            
+            <div class="form-group">
+                <label class="block text-gray-700 font-semibold mb-2">Skills</label>
+                <div class="space-y-2">
+                    <label class="inline-flex items-center">
+                        <input type="checkbox" name="skills" value="CSS" class="form-checkbox text-blue-500">
+                        <span class="ml-2">CSS</span>
+                    </label>
+                    <label class="inline-flex items-center">
+                        <input type="checkbox" name="skills" value="JS" class="form-checkbox text-blue-500">
+                        <span class="ml-2">JavaScript</span>
+                    </label>
+                    <label class="inline-flex items-center">
+                        <input type="checkbox" name="skills" value="HTML" class="form-checkbox text-blue-500">
+                        <span class="ml-2">HTML</span>
+                    </label>
+                    <label class="inline-flex items-center">
+                        <input type="checkbox" name="skills" value="MERN Stack" class="form-checkbox text-blue-500">
+                        <span class="ml-2">MERN Stack</span>
+                    </label>
+                    <label class="inline-flex items-center">
+                        <input type="checkbox" name="skills" value="Web Dev" class="form-checkbox text-blue-500">
+                        <span class="ml-2">Web Development</span>
+                    </label>
+                    <label class="inline-flex items-center">
+                        <input type="checkbox" name="skills" value="App Dev" class="form-checkbox text-blue-500">
+                        <span class="ml-2">App Development</span>
+                    </label>
+                    <label class="inline-flex items-center">
+                        <input type="checkbox" name="skills" value="Backend Dev" class="form-checkbox text-blue-500">
+                        <span class="ml-2">Backend Development</span>
+                    </label>
+                    <label class="inline-flex items-center">
+                        <input type="checkbox" name="skills" value="Full Stack" class="form-checkbox text-blue-500">
+                        <span class="ml-2">Full Stack Development</span>
+                    </label>
+                    <label class="inline-flex items-center">
+                        <input type="checkbox" name="skills" value="Robotics" class="form-checkbox text-blue-500">
+                        <span class="ml-2">Robotics</span>
+                    </label>
+                </div>
+            </div>
+
+            
+            <div class="form-group">
+                <label for="slots" class="block text-gray-700 font-semibold mb-2">Number of Slots</label>
+                <select id="slots" name="slots" class="w-full p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-transparent" required>
+                    <option value="" disabled selected>Select Number of Slots</option>
+                    <option value="1">1 Slot</option>
+                    <option value="2">2 Slots</option>
+                    <option value="3">3 Slots</option>
+                    <option value="4">4 Slots</option>
+                    <option value="5">5 Slots</option>
+                    <option value="6">6 Slots</option>
+                    <option value="7">7 Slots</option>
+                    <option value="8">8 Slots</option>
+                    <option value="9">9 Slots</option>
+                    <option value="10">10 Slots</option>
+                </select>
+            </div>
+
+            
+            <button type="submit" class="w-full py-3 px-6 bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-bold rounded-xl shadow-lg hover:bg-gradient-to-r hover:from-indigo-500 hover:to-blue-500 focus:outline-none focus:ring-4 focus:ring-blue-300">Submit</button>
+        </form>
+    </div>
+
+    <script type="module" src="assets/js/submitmentor.js"></script>
+
+</body>
+
+</html>

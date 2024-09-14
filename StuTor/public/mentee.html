@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Tailwind CSS Sidebar Layout</title>
+  <link  href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="assets/css/styles.css" rel="stylesheet">
+  <style>
+    /* Styling for announcement popup */
+    .popup 
+    {
+      display: none;
+    }
+    .group:hover .popup,
+    .group:focus-within .popup {
+      display: block;
+    }
+    .card {
+      background-color: white;
+      border-radius: 0.375rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 1rem;
+      margin: 1rem;
+      width: 300px;
+    }
+    .card img
+     {
+      border-radius: 0.375rem;
+      width: 100%;
+      height: auto;
+    }
+    .card-content h5 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-top: 0.5rem;
+    }
+    .rating svg {
+      margin-right: 0.25rem;
+     }
+    .choose-btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #3490dc;
+      color: white;
+      text-align: center;
+      border-radius: 0.375rem;
+      text-decoration: none;
+   }
+    .mentor-cards-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <nav class="fixed top-0 left-0 right-0 z-50 flex items-center p-4 bg-white shadow-md">
+    
+    <div class="flex items-center space-x-4">
+      
+      <a  href="#">
+        <img src="https://firebasestorage.googleapis.com/v0/b/stutor-codekridos.appspot.com/o/profile_pics%2FDKZ3tUhk9wgeYKJPjNus8gyQflT2%2FScreenshot%202024-09-14%20at%208.21.36%E2%80%AFAM.png?alt=media&token=6d6ef0e5-735b-4e00-a057-ca1d53d6b4de" alt="Logo" class="h-10 w-auto">
+      </a>
+      <a href="#" class="text-gray-600 hover:text-black font-medium ml-12">Stutor</a>
+    </div>
+    <div class="flex-1 flex justify-center">
+      <div class="relative w-full max-w-md">
+        <input type="text" placeholder="Search..." class="bg-gray-100 text-gray-600 px-4 py-2 rounded-full w-full border border-gray-300 focus:border-blue-500 focus:outline-none">
+        <div class="absolute right-3 top-2 text-gray-400">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M12.9 14.32a8 8 0 111.42-1.42l5.38 5.38a1 1 0 01-1.42 1.42l-5.38-5.38zM8 14A6 6 0 108 2a6 6 0 000 12z" clip-rule="evenodd" />
+          </svg>
+        </div>
+      </div>
+    </div>
+           <div class="flex items-center">
+      <div class="relative">
+        <div class="h-10 w-10 flex items-center justify-center text-gray-600">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" class="h-8 w-8">
+       <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/>
+          </svg>
+        </div>
+      </div>
+
+      
+      <div class="relative group ml-[25px]">
+        
+        <div class="h-10 w-10 rounded-full bg-black cursor-pointer"></div>
+
+        
+        <div  class="absolute right-0 mt-2 w-64 bg-white rounded-lg shadow-lg py-2 hidden group-hover:block">
+          
+          <div class="flex flex-col items-center">
+            <img src="https://via.placeholder.com/60" alt="Profile" class="w-16 h-16 rounded-full">
+            
+            <span class="mt-2 text-gray-800 font-semibold">Muralidhar Acharya</span>
+          </div>
+          <hr class="border-gray-200 my-2">
+          <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-black">Profile</a>
+          <a  href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-black">Settings</a>
+          <hr class="border-gray-200 my-2">
+          <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-black">Sign out</a>
+        </div>
+        </div>
+    </div>
+  </nav>
+
+  <div class="relative pt-20 min-h-screen bg-gray-50">
+    
+    <aside class="absolute top-0 left-0 h-full w-64 bg-white shadow-lg pt-20">
+      <div class="px-6 py-4">
+        <h2 class="text-xl font-semibold text-gray-800">Explore</h2>
+        <ul class="mt-4 space-y-4">
+          <li  class="relative group focus-within">
+            <a href="announcements.html" class="block text-gray-600 hover:text-blue-500 hover:underline transition duration-300 focus:outline-none">
+              Announcements
+            </a>
+            
+            <div class="absolute top-full left-0 w-64 bg-white shadow-lg p-4 rounded-lg popup">
+              <h3 class="text-lg font-semibold text-gray-700">Latest Announcements</h3>
+              <p class="mt-2 text-gray-600">Latest Announcements. Stay tuned for updates.</p>
+            </div>
+          </li>
+          <li> <a href="#" class="block text-gray-600 hover:text-black">Clubs</a></li>
+          <li> <a href="yourmentors.html" class="block text-gray-600 hover:text-black">Mentors</a></li>
+          <li><a href="alumni.html" class="block text-gray-600 hover:text-black">Alumni</a></li>
+          <li><a href="library.html" class="block text-gray-600 hover:text-black">Library</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    
+    <main class="ml-64 mt-10 items-center justify-center">
+      <div class="text-center">
+        <h1 class="text-3xl font-bold text-gray-800">Welcome, <span class="pop-animation text-blue-600">Student</span>!</h1>
+        <p class="mt-4 text-gray-600">Connecting You to Knowledge, One Mentor at a Time.</p>
+      </div>
+      <div class="mentor-cards-wrapper flex  mt-2 py-8 px-4">
+        
+        <div class="mentor-cards-container ml-300 w-full lg:w-[calc(100%-250px)] mx-auto grid grid-cols-1 sm:grid-cols-4 md:grid-cols-4 gap-5">
+          
+          <div class="card bg-white shadow-lg rounded-lg overflow-hidden">
+            <img src="img.jpg" alt="Mentor Image" class="w-full h-48 object-cover">
+            <div class="card-content p-4">
+              <h5 class="text-lg font-semibold">John Doe</h5>
+              <p>Experience: 10 years in tech industry</p>
+              <p>Expertise: Software Engineering, AI, Machine Learning</p>
+              <p class="mentor-user-id-12345 hidden">12345</p>
+         <a href="#" class="choose-btn">Choose Mentor</a>
+              <div class="rating flex items-center mt-2">
+                <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 17.27l5.18 3.64-1.45-6.31L22 9.24l-6.36-.55L12 2 8.36 8.69 2 9.24l4.27 4.35-1.45 6.31L12 17.27z"/>
+                </svg>
+                <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+             <path d="M12 17.27l5.18 3.64-1.45-6.31L22 9.24l-6.36-.55L12 2 8.36 8.69 2 9.24l4.27 4.35-1.45 6.31L12 17.27z"/>
+                </svg>
+                <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 17.27l5.18 3.64-1.45-6.31L22 9.24l-6.36-.55L12 2 8.36 8.69 2 9.24l4.27 4.35-1.45 6.31L12 17.27z"/>
+                   </svg>
+                <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 17.27l5.18 3.64-1.45-6.31L22 9.24l-6.36-.55L12 2 8.36 8.69 2 9.24l4.27 4.35-1.45 6.31L12 17.27z"/>
+                </svg>
+         <svg class="w-4 h-4 text-gray-300" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 17.27l5.18 3.64-1.45-6.31L22 9.24l-6.36-.55L12 2 8.36 8.69 2 9.24l4.27 4.35-1.45 6.31L12 17.27z"/>
+                </svg>
+              </div>
+            </div>
+     </div>
+          
+        </div>
+      </div>
+      </main>
+    
+  
+  <script type="module" src="assets/js/mentee.js"></script>
+</body>
+</html>

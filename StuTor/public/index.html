@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>College Peer Tutoring and Mentorship</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <style>
+    body {
+      background-color: #f3f4f6;
+      overflow: hidden; 
+      position: relative;
+    }
+    .background-animation {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none; 
+      overflow: hidden;
+    }
+    .background-animation .circle, 
+    .background-animation .book, 
+    .background-animation .icon, 
+    .background-animation .line {
+      position: absolute;
+      pointer-events: none;
+    }
+    .background-animation .circle {
+      border-radius: 50%;
+      background: rgba(0, 0, 255, 0.2);
+      animation: float 15s infinite;
+    }
+
+    .background-animation .book {
+      width: 90px;
+      height: 90px;
+      background-image: url('assets/images/book.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      animation: float 20s infinite;
+    }
+    .background-animation .icon {
+      width: 50px;
+      height: 50px;
+      background-image: url('assets/images/icon.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      animation: float 25s infinite;
+    }
+
+    .background-animation .line {
+      width: 2px;
+      background-color: rgba(0, 0, 255, 0.2);
+      animation: float 30s infinite, connect 20s infinite;
+    }
+    @keyframes float {
+      0% { transform: translateY(0); opacity: 0.6; }
+      50% { transform: translateY(-30px); opacity: 0.3; }
+      100% { transform: translateY(0); opacity: 0.6; }
+    }
+
+    @keyframes connect {
+      0% { height: 0; }
+      50% { height: 100px; }
+      100% { height: 0; }
+    }
+    .main-container {
+      position: relative;
+      z-index: 10;
+      padding: 10px;
+      text-align: center;
+      background-color: white;
+      border-radius: 12px;
+      transition: transform 0.4s ease, box-shadow 0.4s ease, border 0.4s ease;
+      border: 4px solid transparent;
+    }
+
+    .main-container:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      border-color: #1D4ED8; 
+      animation: highlight 0.6s ease-in-out;
+    }
+
+    @keyframes highlight {
+      0% {
+        box-shadow: 0 0 0px rgba(29, 78, 216, 0.8);
+      }
+      50% {
+        box-shadow: 0 0 15px rgba(29, 78, 216, 0.6);
+      }
+      100% {
+        box-shadow: 0 0 20px rgba(29, 78, 216, 0.4);
+      }
+     }
+    .welcome-text {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 700;
+      font-size: 3rem;
+      color: #333;
+    }
+
+    .stutor-text {
+      font-family: 'Roboto Slab', serif;
+      font-weight: 700;
+      font-size: 4rem;
+      color: #1D4ED8;
+    }
+
+    .btn-primary
+     {
+      background-color: #1D4ED8;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background-color: #1E40AF;
+    }
+  </style>
+</head>
+<body class="relative h-screen w-screen flex items-center justify-center bg-gray-100">
+
+  <div class="background-animation"></div>
+
+  <div class="main-container fade-in p-10">
+    <h1 class="welcome-text mb-2">Welcome To </h1>
+    <h3 class="stutor-text mb-6">StuTor</h3>
+    <p class="text-2xl mb-4">Your gateway to college peer tutoring and mentorship.</p>
+    <p class="text-lg mb-6 text-gray-600">Connect with fellow students, find mentors, and enhance your learning experience.</p>
+    <button id="start-btn" class="mt-8 px-8 py-4 btn-primary font-bold rounded-full shadow-lg hover:bg-blue-700 transition duration-300 transform hover:scale-105">Get Started</button>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      setTimeout(() => {
+        document.querySelector('.fade-in').classList.add('show');
+      }, 100);
+      const background = document.querySelector('.background-animation');
+
+      const createRandomElement = (className, width, height, count) => 
+      {
+        for (let i = 0; i < count; i++) {
+          const element = document.createElement('div');
+          element.className = className;
+          element.style.width = `${width}px`;
+          element.style.height = `${height}px`;
+          element.style.top = `${Math.random() * 100}vh`;
+          element.style.left = `${Math.random() * 100}vw`;
+          background.appendChild(element);
+        }
+      };
+      createRandomElement('circle', 100, 100, 20);
+        createRandomElement('book', 90, 90, 15);
+      createRandomElement('icon', 50, 50, 20);
+      createRandomElement('line', 2, 100, 15);
+    });
+  </script>
+    <script type="module" src="assets/js/firebase.js"></script>
+  <script type="module" src="assets/js/auth.js"></script>
+
+  <script type="module">
+    document.addEventListener('DOMContentLoaded', () => {
+      const startBtn = document.getElementById('start-btn');
+      if (startBtn) {
+        startBtn.addEventListener('click', () => {
+          window.location.href = 'login.html';
+         });
+      }
+    });
+  </script>
+</body>
+</html>
